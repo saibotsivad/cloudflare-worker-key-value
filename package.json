@@ -1,0 +1,25 @@
+{
+  "name": "cloudflare-worker-key-value",
+  "version": "1.0.0",
+  "description": "CLI tool for interacting with the Cloudflare Worker Key Value store. ",
+  "bin": {
+    "cfwkv": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saibotsivad/cloudflare-worker-key-value.git"
+  },
+  "keywords": [
+    "cloudflare"
+  ],
+  "author": "saibotsivad",
+  "license": "VOL",
+  "bugs": {
+    "url": "https://github.com/saibotsivad/cloudflare-worker-key-value/issues"
+  },
+  "homepage": "https://github.com/saibotsivad/cloudflare-worker-key-value#readme",
+  "dependencies": {
+    "got": "^10.5.5",
+    "sade": "^1.7.0"
+  }
+}
