@@ -2,6 +2,9 @@
   "name": "cloudflare-worker-key-value",
   "version": "1.0.0",
   "description": "CLI tool for interacting with the Cloudflare Worker Key Value store. ",
+  "engines": {
+    "node" : ">=10"
+  },
   "bin": {
     "cfwkv": "index.js"
   },
