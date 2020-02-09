@@ -20,6 +20,8 @@ const envToProp = {
 	CLOUDFLARE_ZONE_ID: 'zoneId'
 }
 
+const alwaysRequired = [ 'email', 'key', 'accountId' ]
+
 const initialize = (opts, required) => {
 	opts = opts || {}
 	Object
@@ -29,8 +31,8 @@ const initialize = (opts, required) => {
 				opts[envToProp[key]] = process.env[key]
 			}
 		})
-	if (![ 'email', 'key', 'accountId' ].every(key => opts[key])) {
-		console.error(`The following options must be set as environment variables or parameters: ${required.join(', ')}`)
+	if (!alwaysRequired.every(key => opts[key])) {
+		console.error(`The following options must be set as environment variables or parameters: ${alwaysRequired.join(', ')}`)
 		process.exit(1)
 	}
 }
@@ -281,7 +283,6 @@ prog
 				'X-Auth-Key': opt.key,
 				'Content-Type': 'text/plain'
 			},
-			body: value,
 			throwHttpErrors: false
 		})
 	})
